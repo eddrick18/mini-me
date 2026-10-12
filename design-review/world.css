@@ -1,0 +1,16 @@
+/* A layered park scene: softer distant shapes, detailed foreground, quiet colors. */
+.room{background:#C5E5EA}
+.room:before{left:-5%;bottom:60px;width:110%;height:100px;background:#A6C5BC;clip-path:polygon(0 70%,7% 70%,7% 59%,14% 59%,14% 49%,23% 49%,23% 54%,28% 54%,28% 42%,33% 42%,33% 31%,39% 31%,39% 20%,44% 20%,44% 29%,48% 29%,48% 40%,55% 40%,55% 30%,60% 30%,60% 21%,66% 21%,66% 14%,70% 14%,70% 28%,76% 28%,76% 42%,81% 42%,81% 52%,86% 52%,86% 45%,91% 45%,91% 57%,96% 57%,96% 68%,100% 68%,100% 100%,0 100%)}
+.room:after{right:32px;top:43px;width:22px;height:22px;background:#F3D995;box-shadow:0 -4px 0 -1px #F3D995,0 4px 0 -1px #F3D995,4px 0 0 -1px #F3D995,-4px 0 0 -1px #F3D995}
+.room .floor{height:66px;background:linear-gradient(#A7C887 0 15px,#B9D696 15px 18px,#C7BEA1 18px 43px,#AFCAA0 43px 46px,#A4C280 46px);border-top:5px solid #789D73}
+.room .floor:after{top:47px;height:8px;background:repeating-linear-gradient(90deg,transparent 0 30px,#83A96F 30px 33px,transparent 33px 35px,#93B57A 35px 39px,transparent 39px 71px)}
+.room .window{top:66px;left:30px;width:43px;height:10px;background:#F4F4E8;box-shadow:8px -6px 0 -1px #F4F4E8,25px 3px 0 -1px #F4F4E8;opacity:.85}
+.room .shelf{left:21px;bottom:64px;width:53px;height:8px;background:#AE8868;border:2px solid #705E55;box-shadow:0 -10px 0 -1px #AE8868,0 -13px 0 -1px #705E55}
+.room .shelf:before,.room .shelf:after{height:14px;background:#705E55}
+.room .plant{right:28px;bottom:65px;width:12px;height:36px;background:#8A7259;border:0;box-shadow:3px 0 0 #A58A6E}
+.room .plant:before{left:-20px;top:-21px;width:52px;height:35px;background:#6C957C;clip-path:polygon(0 35%,14% 35%,14% 13%,32% 13%,32% 0,72% 0,72% 14%,88% 14%,88% 38%,100% 38%,100% 83%,82% 83%,82% 100%,18% 100%,18% 84%,0 84%);box-shadow:none}
+.room .plant:after{left:-12px;top:-17px;width:35px;height:21px;background:#86AB88;clip-path:polygon(0 27%,20% 27%,20% 0,76% 0,76% 23%,100% 23%,100% 74%,70% 74%,70% 100%,0 100%)}
+.world-depth{position:absolute;left:0;right:0;bottom:64px;height:62px;pointer-events:none;z-index:-1;background:linear-gradient(transparent 30px,#8EAF93 30px);clip-path:polygon(0 43%,5% 43%,5% 16%,14% 16%,14% 0,24% 0,24% 19%,32% 19%,32% 44%,44% 44%,44% 65%,63% 65%,63% 43%,74% 43%,74% 21%,85% 21%,85% 39%,95% 39%,95% 61%,100% 61%,100% 100%,0 100%)}
+.world-ground-shadow{position:absolute;bottom:11px;left:calc(50% - 40px);width:80px;height:8px;background:#6D785D33;clip-path:polygon(8% 0,92% 0,92% 25%,100% 25%,100% 75%,92% 75%,92% 100%,8% 100%,8% 75%,0 75%,0 25%,8% 25%);pointer-events:none}
+.world-stones{position:absolute;left:18px;bottom:22px;width:17px;height:3px;background:#A89E83;box-shadow:30px 8px 0 -1px #A89E83,220px 2px 0 #A89E83,272px 8px 0 -1px #A89E83;pointer-events:none}
+.reward-screen .room{background:#DDD6ED}.reward-screen .room:before{background:#B8B0CC}.reward-screen .world-depth{background:linear-gradient(transparent 30px,#A49DB8 30px)}

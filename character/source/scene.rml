@@ -1,0 +1,72 @@
+<Rive version="1" kind="fragment">
+  <Artboard width="320" height="280" name="MiniMe" id="0:1" styleId="0:2" defaultStateMachineId="0:3" viewModelId="0:100" viewModelInstanceId="0:101">
+    <LayoutComponentStyle name="Artboard style" id="0:2"/>
+    <Fill name="Stage background"><SolidColor colorValue="FFDCE9E9"/></Fill>
+    <Node x="160" y="140" name="Character" id="0:10">
+      <Shape x="-14" y="-25" name="Left eye"><Ellipse width="6" height="8"/><Fill><SolidColor colorValue="FF203444"/></Fill></Shape>
+      <Shape x="14" y="-25" name="Right eye"><Ellipse width="6" height="8"/><Fill><SolidColor colorValue="FF203444"/></Fill></Shape>
+      <Shape y="-9" name="Smile"><Rectangle width="14" height="4" cornerRadiusTL="2"/><Fill><SolidColor colorValue="FF203444"/></Fill></Shape>
+      <Shape y="-54" name="Hair"><Rectangle width="72" height="28" cornerRadiusTL="10"/><Fill><SolidColor colorValue="FF203444"/></Fill></Shape>
+      <Shape y="-28" name="Face"><Ellipse width="70" height="74"/><Fill><SolidColor colorValue="FFE5B88E"/></Fill></Shape>
+      <Node x="0" y="52" opacity="0" name="Book" id="0:14">
+        <Shape x="0" y="0" name="Book spine"><Rectangle width="3" height="32"/><Fill><SolidColor colorValue="FF203444"/></Fill></Shape>
+        <Shape x="0" y="0" name="Book cover"><Rectangle width="66" height="34" cornerRadiusTL="3"/><Fill><SolidColor colorValue="FF315A75"/></Fill></Shape>
+      </Node>
+      <Node x="-36" y="16" name="Left arm" id="0:12">
+        <Shape y="22" name="Hand"><Ellipse width="18" height="20"/><Fill><SolidColor colorValue="FFE5B88E"/></Fill></Shape>
+        <Shape y="5" name="Sleeve"><Rectangle width="20" height="32" cornerRadiusTL="8"/><Fill><SolidColor colorValue="FFF0BC69"/></Fill></Shape>
+      </Node>
+      <Node x="36" y="16" name="Right arm" id="0:13">
+        <Shape y="22" name="Hand"><Ellipse width="18" height="20"/><Fill><SolidColor colorValue="FFE5B88E"/></Fill></Shape>
+        <Shape y="5" name="Sleeve"><Rectangle width="20" height="32" cornerRadiusTL="8"/><Fill><SolidColor colorValue="FFF0BC69"/></Fill></Shape>
+      </Node>
+      <Shape y="33" name="Shirt"><Rectangle width="60" height="68" cornerRadiusTL="12"/><Fill><SolidColor colorValue="FFF0BC69"/></Fill></Shape>
+      <Shape x="-17" y="93" name="Left shoe"><Rectangle width="28" height="14" cornerRadiusTL="5"/><Fill><SolidColor colorValue="FF203444"/></Fill></Shape>
+      <Shape x="17" y="93" name="Right shoe"><Rectangle width="28" height="14" cornerRadiusTL="5"/><Fill><SolidColor colorValue="FF203444"/></Fill></Shape>
+      <Shape x="-16" y="73" name="Left leg"><Rectangle width="22" height="36"/><Fill><SolidColor colorValue="FF315A75"/></Fill></Shape>
+      <Shape x="16" y="73" name="Right leg"><Rectangle width="22" height="36"/><Fill><SolidColor colorValue="FF315A75"/></Fill></Shape>
+    </Node>
+    <Shape x="160" y="244" name="Ground"><Ellipse width="106" height="12"/><Fill><SolidColor colorValue="FFBCCBD5"/></Fill></Shape>
+    <StateMachine name="CharacterController" id="0:3">
+      <StateMachineLayer name="Pose" id="0:4">
+        <AnyState x="0" y="-200"/>
+        <ExitState x="400" y="-200"/>
+        <EntryState x="-200" y="0"><StateTransition stateToId="0:20"/></EntryState>
+        <AnimationState animationId="0:30" x="0" y="0" id="0:20">
+          <StateTransition stateToId="0:21" duration="180"><TransitionViewModelCondition><TransitionPropertyViewModelComparator><BindablePropertyNumber><DataBindContext sourcePathIds="0:100-0:102" propertyKey="636"/></BindablePropertyNumber></TransitionPropertyViewModelComparator><TransitionValueNumberComparator value="1"/></TransitionViewModelCondition></StateTransition>
+          <StateTransition stateToId="0:22" duration="180"><TransitionViewModelCondition><TransitionPropertyViewModelComparator><BindablePropertyNumber><DataBindContext sourcePathIds="0:100-0:102" propertyKey="636"/></BindablePropertyNumber></TransitionPropertyViewModelComparator><TransitionValueNumberComparator value="2"/></TransitionViewModelCondition></StateTransition>
+        </AnimationState>
+        <AnimationState animationId="0:31" x="240" y="160" id="0:21">
+          <StateTransition stateToId="0:20" duration="180"><TransitionViewModelCondition><TransitionPropertyViewModelComparator><BindablePropertyNumber><DataBindContext sourcePathIds="0:100-0:102" propertyKey="636"/></BindablePropertyNumber></TransitionPropertyViewModelComparator><TransitionValueNumberComparator value="0"/></TransitionViewModelCondition></StateTransition>
+          <StateTransition stateToId="0:22" duration="180"><TransitionViewModelCondition><TransitionPropertyViewModelComparator><BindablePropertyNumber><DataBindContext sourcePathIds="0:100-0:102" propertyKey="636"/></BindablePropertyNumber></TransitionPropertyViewModelComparator><TransitionValueNumberComparator value="2"/></TransitionViewModelCondition></StateTransition>
+        </AnimationState>
+        <AnimationState animationId="0:32" x="480" y="0" id="0:22" reset="true">
+          <StateTransition stateToId="0:20" duration="180"><TransitionViewModelCondition><TransitionPropertyViewModelComparator><BindablePropertyNumber><DataBindContext sourcePathIds="0:100-0:102" propertyKey="636"/></BindablePropertyNumber></TransitionPropertyViewModelComparator><TransitionValueNumberComparator value="0"/></TransitionViewModelCondition></StateTransition>
+          <StateTransition stateToId="0:21" duration="180"><TransitionViewModelCondition><TransitionPropertyViewModelComparator><BindablePropertyNumber><DataBindContext sourcePathIds="0:100-0:102" propertyKey="636"/></BindablePropertyNumber></TransitionPropertyViewModelComparator><TransitionValueNumberComparator value="1"/></TransitionViewModelCondition></StateTransition>
+        </AnimationState>
+      </StateMachineLayer>
+    </StateMachine>
+    <LinearAnimation name="Idle" id="0:30" duration="120" loopValue="loop">
+      <KeyedObject objectId="0:10"><KeyedProperty property="y"><KeyFrameDouble value="140"/><KeyFrameDouble value="137" frame="60" interpolationType="linear"/><KeyFrameDouble value="140" frame="120" interpolationType="linear"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:12"><KeyedProperty property="rotation"><KeyFrameDouble value="0"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:13"><KeyedProperty property="rotation"><KeyFrameDouble value="0"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:14"><KeyedProperty property="opacity"><KeyFrameDouble value="0"/></KeyedProperty></KeyedObject>
+    </LinearAnimation>
+    <LinearAnimation name="Studying" id="0:31" duration="120" loopValue="loop">
+      <KeyedObject objectId="0:10"><KeyedProperty property="y"><KeyFrameDouble value="140"/><KeyFrameDouble value="138" frame="60" interpolationType="linear"/><KeyFrameDouble value="140" frame="120" interpolationType="linear"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:12"><KeyedProperty property="rotation"><KeyFrameDouble value="-0.4"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:13"><KeyedProperty property="rotation"><KeyFrameDouble value="0.4"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:14"><KeyedProperty property="opacity"><KeyFrameDouble value="1"/></KeyedProperty></KeyedObject>
+    </LinearAnimation>
+    <LinearAnimation name="Celebration" id="0:32" duration="60" loopValue="loop">
+      <KeyedObject objectId="0:10"><KeyedProperty property="y"><KeyFrameDouble value="140"/><KeyFrameDouble value="124" frame="20" interpolationType="linear"/><KeyFrameDouble value="140" frame="40" interpolationType="linear"/><KeyFrameDouble value="140" frame="60"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:12"><KeyedProperty property="rotation"><KeyFrameDouble value="2.4"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:13"><KeyedProperty property="rotation"><KeyFrameDouble value="-2.4"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:14"><KeyedProperty property="opacity"><KeyFrameDouble value="0"/></KeyedProperty></KeyedObject>
+    </LinearAnimation>
+  </Artboard>
+  <ViewModel name="CharacterState" id="0:100" defaultInstanceId="0:101">
+    <ViewModelPropertyNumber name="pose" id="0:102"/>
+    <ViewModelInstance name="Default" id="0:101" exports="true"><ViewModelInstanceNumber propertyValue="0" viewModelPropertyId="0:102"/></ViewModelInstance>
+  </ViewModel>
+</Rive>

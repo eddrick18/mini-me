@@ -1,0 +1,21 @@
+# Activity badge collection
+
+Four all-time keepsakes live in Progress: First Steps (one saved Walking / Running session), Bookworm (five saved study sessions), Finding Your Rhythm (five saved music sessions), All-Rounder (at least one saved session in each of the five activities).
+
+Source of truth: `src/domain/achievements.ts` derives badges from unique completed-session IDs, in completion order. Zero-XP and short saved sessions count. Active/paused sessions do not count until saved. Progress is capped at the threshold; the qualifying session's completion time is the earned date, displayed in Manila time. No extra XP, daily quota changes, claims or new storage fields are introduced.
+
+Existing local history and imported backups populate the collection immediately and silently. Replacing history with a different backup recomputes its badges from that history. There is no independent ownership record to become inconsistent with restored sessions.
+
+`AchievementCollection` owns the two-column pixel badge grid, monochrome locked icons, named status, accessible progress bars and earned dates. `AchievementBadge` extends the existing native SVG/pixel art system. Collection cards are informational, not buttons. `AchievementUnlock` owns a brief three-bounce badge animation and live announcement on the reward page. The existing foreground/still-pose/OS motion policy gates the bounce. Its timers stop on unmount or motion changes. The result remains readable after motion ends.
+
+The session finish handler compares history before and after successful persistence. Only newly crossed thresholds show the reward card. Reopening, opening Progress, navigating, imports and failed saves do not replay it. Session save and XP ownership remain with the existing useSessions/domain/store flow.
+
+Verification evidence is recorded after implementation checks. Physical iPhone layout, large-text and screen-reader behavior require device review.
+
+Verification: TypeScript, all 52 tests (including three achievement cases), web export and iOS Expo Go bundling passed. Scoped Progress UI audit reported zero findings; DESIGN.md lint reported zero errors and five existing token-reference schema warnings. At 390 × 844, the browser showed existing First Steps ownership, partial/locked progress, fifth Music save unlocking Finding Your Rhythm, the reward-to-collection action, and retained ownership after reload without replay. No browser runtime errors were logged. Five short Music sessions were created in the isolated localhost preview for this check; phone records were not edited. Evidence: artifacts/achievements-collected.png and artifacts/achievement-unlock.png.
+
+## Interactive badge details
+Collection tiles are now labeled, keyboard/touch-operable buttons with hover/focus/pressed/disabled states. AchievementDetail is a scrolling Progress subpage with Back to badge collection, a larger badge, earned date, readable progress and a saved-session checklist. All-Rounder lists all five activities and suggests the first untried activity in the app's existing order. Single-activity badges show that activity's unique saved-session count. Collected badges have no earn CTA.
+The domain helper achievementDetails owns checklist counts and next-activity selection. Start calls the existing startActivity handler, retaining GPS permission and error behavior. An active session replaces Start with an explanation and Return to your session. Unsupported browser GPS has an explanatory message and disabled Walking / Running start. No new session, XP or persistence authority is introduced.
+
+Detail verification: TypeScript, all 54 tests, web export and Expo Go iOS bundle passed. Scoped Progress audit has zero findings; DESIGN lint has zero errors with five existing token-reference warnings. Browser verified keyboard tile activation, 390 × 844 scrolling checklist and reachable action, direct Study start, active-session Return guard, one saved Study updating All-Rounder to 1/5 and suggesting Working, disabled browser GPS with explanation, and an earned First Steps date without an earn CTA. No browser runtime errors. One short Study session was saved in the clean localhost preview only. Evidence: artifacts/achievement-detail-checklist.png. Physical iPhone text scaling and screen-reader review remain pending.

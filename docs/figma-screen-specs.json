@@ -1,0 +1,1780 @@
+[
+  {
+    "key": "home",
+    "label": "Home · before a session",
+    "title": "A little progress, daily.",
+    "subtitle": "Saturday, 10 October",
+    "nav": "Home",
+    "parts": [
+      {
+        "type": "room",
+        "label": "Ready when you are"
+      },
+      {
+        "type": "progress",
+        "total": 80,
+        "level": 1
+      },
+      {
+        "type": "card",
+        "title": "Today is yours",
+        "message": "No activities logged yet.",
+        "tail": "Rest days keep every earned level."
+      }
+    ],
+    "actions": [
+      {
+        "label": "Choose an activity",
+        "to": "picker"
+      }
+    ]
+  },
+  {
+    "key": "picker",
+    "label": "Choose one of five activities",
+    "title": "What are you up to?",
+    "subtitle": "Every activity can grow your companion.",
+    "parts": [
+      {
+        "type": "activity",
+        "title": "Studying",
+        "description": "Books, courses, or a new skill",
+        "to": "session"
+      },
+      {
+        "type": "activity",
+        "title": "Working",
+        "description": "Focus time, projects, or everyday tasks",
+        "to": "workSession"
+      },
+      {
+        "type": "activity",
+        "title": "Gym",
+        "description": "A workout at your own pace",
+        "to": "gymSession"
+      },
+      {
+        "type": "activity",
+        "title": "Running",
+        "description": "A run, without GPS tracking",
+        "to": "runSession"
+      },
+      {
+        "type": "activity",
+        "title": "Music",
+        "description": "Listen for enjoyment, without an integration",
+        "to": "musicSession"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Log a completed activity",
+        "to": "log",
+        "style": "Secondary"
+      },
+      {
+        "label": "Back to Home",
+        "to": "home",
+        "style": "Secondary"
+      }
+    ]
+  },
+  {
+    "key": "session",
+    "label": "Studying · running",
+    "title": "Studying",
+    "subtitle": "Session in progress · sample timer",
+    "parts": [
+      {
+        "type": "room",
+        "label": "Studying · book pose planned"
+      },
+      {
+        "type": "text",
+        "value": "25:00",
+        "style": "timer"
+      },
+      {
+        "type": "text",
+        "value": "Active time · pauses do not count",
+        "style": "caption",
+        "color": "muted"
+      },
+      {
+        "type": "notice",
+        "title": "Your session stays here",
+        "message": "You can leave the app and return. Finish when you are ready."
+      }
+    ],
+    "actions": [
+      {
+        "label": "Pause session",
+        "to": "paused",
+        "style": "Secondary"
+      },
+      {
+        "label": "Finish session",
+        "to": "finish"
+      }
+    ],
+    "note": "Prototype timer is static. Activity poses await character review."
+  },
+  {
+    "key": "paused",
+    "label": "Studying · paused",
+    "title": "Take your time.",
+    "subtitle": "Studying · paused",
+    "parts": [
+      {
+        "type": "room",
+        "label": "Paused · calm idle"
+      },
+      {
+        "type": "text",
+        "value": "25:00",
+        "style": "timer"
+      },
+      {
+        "type": "notice",
+        "title": "The clock is paused",
+        "message": "Nothing is earned until you finish. Your earned levels stay with you."
+      },
+      {
+        "type": "button",
+        "label": "Discard this session",
+        "to": "discard",
+        "style": "Secondary"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Resume session",
+        "to": "session"
+      },
+      {
+        "label": "Finish session",
+        "to": "finish",
+        "style": "Secondary"
+      }
+    ]
+  },
+  {
+    "key": "finish",
+    "label": "Review before completion",
+    "title": "Finish this session?",
+    "subtitle": "Check the active time before saving.",
+    "parts": [
+      {
+        "type": "card",
+        "title": "Studying · 25 minutes",
+        "message": "Today, 10 October · 9:16–9:41",
+        "tail": "Paused time excluded"
+      },
+      {
+        "type": "notice",
+        "title": "30 XP available",
+        "message": "A session of 20 minutes or more earns 30 XP, within today's limits."
+      },
+      {
+        "type": "text",
+        "value": "Saving records this session and its progress once. Celebration follows a successful save.",
+        "style": "caption",
+        "color": "muted"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Save session",
+        "to": "reward"
+      },
+      {
+        "label": "Keep studying",
+        "to": "session",
+        "style": "Secondary"
+      }
+    ]
+  },
+  {
+    "key": "reward",
+    "label": "Completion · level and palette unlock",
+    "title": "Level 2. Looking good.",
+    "subtitle": "Studying · 25 minutes saved",
+    "parts": [
+      {
+        "type": "room",
+        "label": "A short celebration, then idle"
+      },
+      {
+        "type": "text",
+        "value": "+30 XP",
+        "style": "display",
+        "color": "primary"
+      },
+      {
+        "type": "progress",
+        "total": 110,
+        "level": 2
+      },
+      {
+        "type": "card",
+        "title": "Clothing palette unlocked",
+        "message": "Try a new shirt color for your companion.",
+        "tail": "Earned rewards stay unlocked.",
+        "to": "character"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Try the new palette",
+        "to": "character"
+      },
+      {
+        "label": "Back to Home",
+        "to": "homeAfter",
+        "style": "Secondary"
+      }
+    ],
+    "note": "Sample 80 → 110 total XP. Celebration artwork is proposed."
+  },
+  {
+    "key": "homeAfter",
+    "label": "Home · saved progress",
+    "title": "A little progress, daily.",
+    "subtitle": "Saturday, 10 October",
+    "nav": "Home",
+    "homeTarget": "homeAfter",
+    "parts": [
+      {
+        "type": "room",
+        "label": "Nice to have you here"
+      },
+      {
+        "type": "progress",
+        "total": 110,
+        "level": 2
+      },
+      {
+        "type": "card",
+        "title": "Today · 1 activity",
+        "message": "Studying · 25 minutes",
+        "tail": "30 / 120 daily XP · details in History",
+        "to": "history"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Choose an activity",
+        "to": "picker"
+      }
+    ]
+  },
+  {
+    "key": "log",
+    "label": "Manual logging",
+    "title": "Log an activity",
+    "subtitle": "Completed activities count too.",
+    "parts": [
+      {
+        "type": "activity",
+        "title": "Music",
+        "description": "Selected activity · tap to change",
+        "to": "logPicker",
+        "selected": true
+      },
+      {
+        "type": "field",
+        "label": "Active minutes",
+        "value": "15",
+        "help": "Enter active time, excluding pauses",
+        "state": "Default"
+      },
+      {
+        "type": "field",
+        "label": "Activity date",
+        "value": "10 October 2026",
+        "help": "Displayed in Asia/Manila",
+        "state": "Default"
+      },
+      {
+        "type": "field",
+        "label": "Note (optional)",
+        "value": "A favorite album",
+        "help": "Only stored on your device",
+        "state": "Default"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Save activity",
+        "to": "logReward",
+        "style": "Primary",
+        "state": "Default"
+      },
+      {
+        "label": "Cancel",
+        "to": "picker",
+        "style": "Secondary",
+        "state": "Default"
+      }
+    ],
+    "note": "Form fields are editable in the local review; no real data is saved."
+  },
+  {
+    "key": "logPicker",
+    "label": "Manual logging · activity choice",
+    "title": "What did you do?",
+    "subtitle": "Choose the completed activity.",
+    "parts": [
+      {
+        "type": "activity",
+        "title": "Studying",
+        "description": "Select for manual logging",
+        "to": "log"
+      },
+      {
+        "type": "activity",
+        "title": "Working",
+        "description": "Select for manual logging",
+        "to": "log"
+      },
+      {
+        "type": "activity",
+        "title": "Gym",
+        "description": "Select for manual logging",
+        "to": "log"
+      },
+      {
+        "type": "activity",
+        "title": "Running",
+        "description": "Select for manual logging",
+        "to": "log"
+      },
+      {
+        "type": "activity",
+        "title": "Music",
+        "description": "Select for manual logging",
+        "to": "log"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Back to form",
+        "to": "log",
+        "style": "Secondary",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "logError",
+    "label": "Manual logging · validation",
+    "title": "Log an activity",
+    "subtitle": "Completed activities count too.",
+    "parts": [
+      {
+        "type": "activity",
+        "title": "Music",
+        "description": "Selected activity · tap to change",
+        "to": "logPicker",
+        "selected": true
+      },
+      {
+        "type": "field",
+        "label": "Active minutes",
+        "value": "0",
+        "help": "Enter at least 1 active minute.",
+        "state": "Error"
+      },
+      {
+        "type": "field",
+        "label": "Activity date",
+        "value": "10 October 2026",
+        "help": "Displayed in Asia/Manila",
+        "state": "Default"
+      },
+      {
+        "type": "field",
+        "label": "Note (optional)",
+        "value": "A favorite album",
+        "help": "Only stored on your device",
+        "state": "Default"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Save activity",
+        "to": "logReward",
+        "style": "Primary",
+        "state": "Disabled"
+      },
+      {
+        "label": "Back to form",
+        "to": "log",
+        "style": "Secondary",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "logSaving",
+    "label": "Manual logging · saving",
+    "title": "Log an activity",
+    "subtitle": "Completed activities count too.",
+    "parts": [
+      {
+        "type": "activity",
+        "title": "Music",
+        "description": "Selected activity · tap to change",
+        "to": "logPicker",
+        "selected": true
+      },
+      {
+        "type": "field",
+        "label": "Active minutes",
+        "value": "15",
+        "help": "Enter active time, excluding pauses",
+        "state": "Default"
+      },
+      {
+        "type": "field",
+        "label": "Activity date",
+        "value": "10 October 2026",
+        "help": "Displayed in Asia/Manila",
+        "state": "Default"
+      },
+      {
+        "type": "field",
+        "label": "Note (optional)",
+        "value": "A favorite album",
+        "help": "Only stored on your device",
+        "state": "Default"
+      },
+      {
+        "type": "notice",
+        "title": "Saving on this device",
+        "message": "Keep this screen open until saving finishes.",
+        "tone": "selected"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Saving…",
+        "to": null,
+        "style": "Primary",
+        "state": "Saving"
+      }
+    ],
+    "note": "Review-only pending state; no automatic transition or actual write."
+  },
+  {
+    "key": "saveError",
+    "label": "Manual logging · save failed",
+    "title": "Log an activity",
+    "subtitle": "Completed activities count too.",
+    "parts": [
+      {
+        "type": "notice",
+        "title": "Activity was not saved",
+        "message": "Your entries are still here. Try again or return to the form.",
+        "tone": "errorSurface"
+      },
+      {
+        "type": "activity",
+        "title": "Music",
+        "description": "Selected activity · tap to change",
+        "to": "logPicker",
+        "selected": true
+      },
+      {
+        "type": "field",
+        "label": "Active minutes",
+        "value": "15",
+        "help": "Enter active time, excluding pauses",
+        "state": "Default"
+      },
+      {
+        "type": "field",
+        "label": "Activity date",
+        "value": "10 October 2026",
+        "help": "Displayed in Asia/Manila",
+        "state": "Default"
+      },
+      {
+        "type": "field",
+        "label": "Note (optional)",
+        "value": "A favorite album",
+        "help": "Only stored on your device",
+        "state": "Default"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Try saving again",
+        "to": "logReward",
+        "style": "Primary",
+        "state": "Default"
+      },
+      {
+        "label": "Return to form",
+        "to": "log",
+        "style": "Secondary",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "logReward",
+    "label": "Manual logging · completion",
+    "title": "A good listen.",
+    "subtitle": "Music · 15 minutes saved",
+    "parts": [
+      {
+        "type": "room",
+        "label": "Enjoyment counts too",
+        "fallback": false
+      },
+      {
+        "type": "text",
+        "value": "+20 XP",
+        "style": "display",
+        "color": "primary"
+      },
+      {
+        "type": "progress",
+        "total": 100,
+        "level": 2
+      },
+      {
+        "type": "card",
+        "title": "Clothing palette unlocked",
+        "message": "Level 2 brings new shirt colors.",
+        "tail": "100 total XP",
+        "to": "character"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Back to Home",
+        "to": "manualHome",
+        "style": "Primary",
+        "state": "Default"
+      },
+      {
+        "label": "View activity",
+        "to": "manualDetail",
+        "style": "Secondary",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "manualHome",
+    "label": "Home · after manual log",
+    "title": "A little progress, daily.",
+    "subtitle": "Saturday, 10 October",
+    "nav": "Home",
+    "homeTarget": "manualHome",
+    "parts": [
+      {
+        "type": "room",
+        "label": "Ready when you are",
+        "fallback": false
+      },
+      {
+        "type": "progress",
+        "total": 100,
+        "level": 2
+      },
+      {
+        "type": "card",
+        "title": "Today · 1 activity",
+        "message": "Music · 15 minutes",
+        "tail": "20 / 120 daily XP",
+        "to": "manualDetail"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Choose an activity",
+        "to": "picker",
+        "style": "Primary",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "history",
+    "label": "History · today's activity",
+    "title": "Your history",
+    "subtitle": "Asia/Manila · earned progress stays yours.",
+    "nav": "History",
+    "parts": [
+      {
+        "type": "text",
+        "value": "Today · 10 October",
+        "style": "label",
+        "color": "text"
+      },
+      {
+        "type": "card",
+        "title": "Studying · 25 minutes",
+        "message": "9:16–9:41 · timed session",
+        "tail": "+30 XP · tap for details",
+        "to": "detail"
+      },
+      {
+        "type": "text",
+        "value": "One activity, at your own pace.",
+        "style": "caption",
+        "color": "muted"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Log a completed activity",
+        "to": "log",
+        "style": "Secondary",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "historyEmpty",
+    "label": "History · no records",
+    "title": "Your history",
+    "subtitle": "A place for what you choose to track.",
+    "nav": "History",
+    "parts": [
+      {
+        "type": "room",
+        "label": "Start whenever you like",
+        "fallback": false
+      },
+      {
+        "type": "notice",
+        "title": "No activities yet",
+        "message": "Start a session or log something you already did. Rest days need no record.",
+        "tone": "selected"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Choose an activity",
+        "to": "picker",
+        "style": "Primary",
+        "state": "Default"
+      },
+      {
+        "label": "Log a completed activity",
+        "to": "log",
+        "style": "Secondary",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "detail",
+    "label": "History · activity details",
+    "title": "Studying",
+    "subtitle": "10 October 2026 · Asia/Manila",
+    "parts": [
+      {
+        "type": "card",
+        "title": "25 active minutes",
+        "message": "9:16–9:41 · timed session",
+        "tail": "Paused time excluded"
+      },
+      {
+        "type": "card",
+        "title": "30 XP earned",
+        "message": "Awarded on 10 October.",
+        "tail": "Corrections and deletion keep this earned XP."
+      },
+      {
+        "type": "text",
+        "value": "Note",
+        "style": "label",
+        "color": "text"
+      },
+      {
+        "type": "text",
+        "value": "Reviewed a chapter and made notes.",
+        "style": "body",
+        "color": "text"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Edit activity",
+        "to": "edit",
+        "style": "Secondary",
+        "state": "Default"
+      },
+      {
+        "label": "Delete activity",
+        "to": "deleteConfirm",
+        "style": "Secondary",
+        "state": "Default"
+      },
+      {
+        "label": "Back to History",
+        "to": "history",
+        "style": "Secondary",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "manualDetail",
+    "label": "History · manual entry",
+    "title": "Music",
+    "subtitle": "10 October 2026 · manually logged",
+    "parts": [
+      {
+        "type": "card",
+        "title": "15 active minutes",
+        "message": "A favorite album",
+        "tail": "20 XP earned"
+      },
+      {
+        "type": "notice",
+        "title": "Your progress is kept",
+        "message": "Editing or deleting this entry does not remove earned XP.",
+        "tone": "selected"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Back to Home",
+        "to": "manualHome",
+        "style": "Secondary",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "edit",
+    "label": "History · edit activity",
+    "title": "Edit activity",
+    "subtitle": "Earned XP is not awarded a second time.",
+    "parts": [
+      {
+        "type": "field",
+        "label": "Activity",
+        "value": "Studying",
+        "help": "The original reward identity is kept",
+        "state": "Default"
+      },
+      {
+        "type": "field",
+        "label": "Active minutes",
+        "value": "30",
+        "help": "Corrected duration",
+        "state": "Default"
+      },
+      {
+        "type": "field",
+        "label": "Activity date",
+        "value": "10 October 2026",
+        "help": "Asia/Manila",
+        "state": "Default"
+      },
+      {
+        "type": "field",
+        "label": "Note (optional)",
+        "value": "Reviewed a chapter and made notes.",
+        "help": "Changes affect the history entry",
+        "state": "Default"
+      },
+      {
+        "type": "notice",
+        "title": "30 XP stays earned",
+        "message": "This correction will not add or remove XP.",
+        "tone": "selected"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Save changes",
+        "to": "editSaved",
+        "style": "Primary",
+        "state": "Default"
+      },
+      {
+        "label": "Cancel",
+        "to": "detail",
+        "style": "Secondary",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "editSaved",
+    "label": "History · correction saved",
+    "title": "Changes saved",
+    "subtitle": "Studying · corrected entry",
+    "parts": [
+      {
+        "type": "card",
+        "title": "30 active minutes",
+        "message": "10 October 2026 · corrected",
+        "tail": "30 XP earned · unchanged"
+      },
+      {
+        "type": "notice",
+        "title": "Progress stays the same",
+        "message": "This session cannot receive another award.",
+        "tone": "selected"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Back to History",
+        "to": "historyEdited",
+        "style": "Primary",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "historyEdited",
+    "label": "History · edited list",
+    "title": "Your history",
+    "subtitle": "Asia/Manila · changes saved.",
+    "nav": "History",
+    "parts": [
+      {
+        "type": "text",
+        "value": "Today · 10 October",
+        "style": "label",
+        "color": "text"
+      },
+      {
+        "type": "card",
+        "title": "Studying · 30 minutes",
+        "message": "Corrected timed session",
+        "tail": "+30 XP · unchanged",
+        "to": "editSaved"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Log a completed activity",
+        "to": "log",
+        "style": "Secondary",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "deleteConfirm",
+    "label": "History · delete confirmation",
+    "title": "Delete this activity?",
+    "subtitle": "Studying · 25 minutes · 10 October",
+    "parts": [
+      {
+        "type": "notice",
+        "title": "Your earned progress stays",
+        "message": "Deleting removes the activity details and note. Its minimal reward receipt stays so XP cannot be awarded twice.",
+        "tone": "selected"
+      },
+      {
+        "type": "text",
+        "value": "To remove XP and all records too, use Reset all data in Settings.",
+        "style": "caption",
+        "color": "muted"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Keep activity",
+        "to": "detail",
+        "style": "Secondary",
+        "state": "Default"
+      },
+      {
+        "label": "Delete activity",
+        "to": "historyDeleted",
+        "style": "Danger",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "historyDeleted",
+    "label": "History · entry deleted",
+    "title": "Activity deleted",
+    "subtitle": "History details removed; progress retained.",
+    "nav": "History",
+    "parts": [
+      {
+        "type": "progress",
+        "total": 110,
+        "level": 2
+      },
+      {
+        "type": "notice",
+        "title": "No activity details remain",
+        "message": "Your earned 30 XP and unlocks are kept. Reset all data also removes reward receipts.",
+        "tone": "selected"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Choose an activity",
+        "to": "picker",
+        "style": "Primary",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "character",
+    "label": "Character · palette preview",
+    "title": "Make it yours.",
+    "subtitle": "Level 2 · clothing palette unlocked",
+    "nav": "Character",
+    "parts": [
+      {
+        "type": "room",
+        "label": "Preview · casual outfit",
+        "fallback": false
+      },
+      {
+        "type": "text",
+        "value": "Skin tone",
+        "style": "label",
+        "color": "text"
+      },
+      {
+        "type": "choices",
+        "labels": [
+          "Warm",
+          "Golden",
+          "Deep"
+        ],
+        "selected": "Warm"
+      },
+      {
+        "type": "text",
+        "value": "Hair",
+        "style": "label",
+        "color": "text"
+      },
+      {
+        "type": "choices",
+        "labels": [
+          "Wavy",
+          "Short",
+          "Curly"
+        ],
+        "selected": "Wavy"
+      },
+      {
+        "type": "text",
+        "value": "Shirt color",
+        "style": "label",
+        "color": "text"
+      },
+      {
+        "type": "choices",
+        "labels": [
+          "Navy",
+          "Gold",
+          "Rust"
+        ],
+        "selected": "Navy"
+      },
+      {
+        "type": "card",
+        "title": "Next: room decoration",
+        "message": "Unlocks at level 3.",
+        "tail": "Locked · 190 XP to go"
+      },
+      {
+        "type": "card",
+        "title": "Activity prop: book",
+        "message": "Complete 5 rewarded study sessions.",
+        "tail": "1 / 5 rewarded sessions"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Save appearance",
+        "to": "characterEquipped",
+        "style": "Primary",
+        "state": "Default"
+      }
+    ],
+    "note": "The character draft and hair alternatives require visual approval. Color preview is interactive."
+  },
+  {
+    "key": "characterEquipped",
+    "label": "Character · appearance saved",
+    "title": "Your look is saved.",
+    "subtitle": "Warm skin · wavy hair · chosen shirt",
+    "nav": "Character",
+    "parts": [
+      {
+        "type": "room",
+        "label": "Saved appearance",
+        "fallback": false
+      },
+      {
+        "type": "notice",
+        "title": "You can change it anytime",
+        "message": "Skin, hair, and owned clothing colors are yours to choose.",
+        "tone": "selected"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Back to Home",
+        "to": "homeAfter",
+        "style": "Primary",
+        "state": "Default"
+      },
+      {
+        "label": "Change appearance",
+        "to": "character",
+        "style": "Secondary",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "settings",
+    "label": "Settings · privacy and motion",
+    "title": "Your app, your pace.",
+    "subtitle": "Personal · works offline",
+    "nav": "Settings",
+    "parts": [
+      {
+        "type": "toggle",
+        "label": "Prefer still poses",
+        "state": "Off",
+        "to": "settingsStill"
+      },
+      {
+        "type": "card",
+        "title": "Timezone",
+        "message": "Asia/Manila",
+        "tail": "Changes apply to the next reward day."
+      },
+      {
+        "type": "card",
+        "title": "Data and backup",
+        "message": "Export, restore, or reset your local data.",
+        "tail": "No account or automatic cloud backup.",
+        "to": "backup"
+      },
+      {
+        "type": "notice",
+        "title": "Stored on this device",
+        "message": "Activity notes and history stay here. Uninstalling may remove them. Export a backup to keep a copy.",
+        "tone": "selected"
+      },
+      {
+        "type": "text",
+        "value": "No streak penalties. Earned levels never expire.",
+        "style": "caption",
+        "color": "muted"
+      }
+    ]
+  },
+  {
+    "key": "settingsStill",
+    "label": "Settings · still poses enabled",
+    "title": "Your app, your pace.",
+    "subtitle": "Personal · works offline",
+    "nav": "Settings",
+    "parts": [
+      {
+        "type": "toggle",
+        "label": "Prefer still poses",
+        "state": "On",
+        "to": "settings"
+      },
+      {
+        "type": "notice",
+        "title": "Still poses enabled",
+        "message": "Activities and progress stay readable. Device reduced-motion also turns animation off.",
+        "tone": "selected"
+      },
+      {
+        "type": "card",
+        "title": "Data and backup",
+        "message": "Export, restore, or reset your local data.",
+        "tail": "No account required.",
+        "to": "backup"
+      }
+    ]
+  },
+  {
+    "key": "backup",
+    "label": "Local backup and privacy",
+    "title": "Data and backup",
+    "subtitle": "Files you control · no cloud account",
+    "parts": [
+      {
+        "type": "card",
+        "title": "Export a backup",
+        "message": "Includes history, notes, appearance, and reward receipts.",
+        "tail": "Keep the file somewhere you trust."
+      },
+      {
+        "type": "button",
+        "label": "Export backup",
+        "to": "exportReady"
+      },
+      {
+        "type": "card",
+        "title": "Restore a backup",
+        "message": "Review the file before replacing this device's data.",
+        "tail": "Invalid files leave your current data intact."
+      },
+      {
+        "type": "button",
+        "label": "Choose backup file",
+        "to": "importReview",
+        "style": "Secondary"
+      },
+      {
+        "type": "notice",
+        "title": "Delete records and progress",
+        "message": "Reset removes history, reward receipts, levels, and appearance choices.",
+        "tone": "selected"
+      },
+      {
+        "type": "button",
+        "label": "Reset all data",
+        "to": "resetConfirm",
+        "style": "Secondary"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Back to Settings",
+        "to": "settings",
+        "style": "Secondary",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "exportReady",
+    "label": "Backup · export ready",
+    "title": "Backup is ready",
+    "subtitle": "Design example · no real file exported",
+    "parts": [
+      {
+        "type": "card",
+        "title": "mini-me-backup.json",
+        "message": "1 sample activity · level 2 · appearance",
+        "tail": "Contains personal notes and history."
+      },
+      {
+        "type": "notice",
+        "title": "Choose where to keep it",
+        "message": "The actual app will open your device's file/share dialog. You control where the copy goes.",
+        "tone": "selected"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Back to backup settings",
+        "to": "backup",
+        "style": "Primary",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "importReview",
+    "label": "Backup · review before replacement",
+    "title": "Restore this backup?",
+    "subtitle": "Example file · mini-me-backup.json",
+    "parts": [
+      {
+        "type": "card",
+        "title": "Backup contents",
+        "message": "3 activities · level 2 · 140 total XP",
+        "tail": "Created 9 October 2026"
+      },
+      {
+        "type": "notice",
+        "title": "This replaces current data",
+        "message": "Current history, progress, and appearance will be replaced. Export them first if you want to keep a copy.",
+        "tone": "selected"
+      },
+      {
+        "type": "button",
+        "label": "Export current data first",
+        "to": "exportReady",
+        "style": "Secondary"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Keep current data",
+        "to": "backup",
+        "style": "Secondary",
+        "state": "Default"
+      },
+      {
+        "label": "Replace with backup",
+        "to": "importDone",
+        "style": "Danger",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "importInvalid",
+    "label": "Backup · invalid file",
+    "title": "Backup could not be read",
+    "subtitle": "Current data remains unchanged.",
+    "parts": [
+      {
+        "type": "notice",
+        "title": "Choose a Mini Me backup",
+        "message": "This file is damaged or has an unsupported format. Choose another exported backup.",
+        "tone": "errorSurface"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Choose another file",
+        "to": "importReview",
+        "style": "Primary",
+        "state": "Default"
+      },
+      {
+        "label": "Back to backup settings",
+        "to": "backup",
+        "style": "Secondary",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "importDone",
+    "label": "Backup · restored example",
+    "title": "Backup restored",
+    "subtitle": "Design example · no actual data replaced",
+    "parts": [
+      {
+        "type": "progress",
+        "total": 140,
+        "level": 2
+      },
+      {
+        "type": "notice",
+        "title": "Your saved data is here",
+        "message": "3 activity records and the backed-up appearance are restored.",
+        "tone": "selected"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Back to backup settings",
+        "to": "backup",
+        "style": "Primary",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "resetConfirm",
+    "label": "Privacy · full reset confirmation",
+    "title": "Reset all data?",
+    "subtitle": "This cannot be undone without a backup.",
+    "parts": [
+      {
+        "type": "notice",
+        "title": "Everything starts fresh",
+        "message": "This removes history, notes, reward receipts, XP, unlocks, and appearance choices.",
+        "tone": "selected"
+      },
+      {
+        "type": "button",
+        "label": "Export a backup first",
+        "to": "exportReady",
+        "style": "Secondary"
+      },
+      {
+        "type": "field",
+        "label": "Type RESET to confirm",
+        "value": "RESET",
+        "help": "The actual app requires this confirmation.",
+        "state": "Default"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Keep my data",
+        "to": "backup",
+        "style": "Secondary",
+        "state": "Default"
+      },
+      {
+        "label": "Reset all data",
+        "to": "resetDone",
+        "style": "Danger",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "resetDone",
+    "label": "Privacy · reset complete",
+    "title": "A fresh start.",
+    "subtitle": "Design example · nothing actually deleted",
+    "parts": [
+      {
+        "type": "room",
+        "label": "Ready whenever you are",
+        "fallback": false
+      },
+      {
+        "type": "progress",
+        "total": 0,
+        "level": 1
+      },
+      {
+        "type": "notice",
+        "title": "All data has been reset",
+        "message": "You are back at level 1 with no saved activities or earned rewards.",
+        "tone": "selected"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Choose an activity",
+        "to": "picker",
+        "style": "Primary",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "interrupted",
+    "label": "Session · recovered after interruption",
+    "title": "Pick up where you left.",
+    "subtitle": "An unfinished studying session was found.",
+    "parts": [
+      {
+        "type": "card",
+        "title": "25 recorded active minutes",
+        "message": "Review this time before finishing.",
+        "tail": "Interrupted time is not added automatically."
+      },
+      {
+        "type": "field",
+        "label": "Active minutes",
+        "value": "25",
+        "help": "Correct the recovered time if needed",
+        "state": "Default"
+      },
+      {
+        "type": "notice",
+        "title": "No XP awarded yet",
+        "message": "Resume, finish the reviewed session, or discard it.",
+        "tone": "selected"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Resume session",
+        "to": "session",
+        "style": "Primary",
+        "state": "Default"
+      },
+      {
+        "label": "Review and finish",
+        "to": "finish",
+        "style": "Secondary",
+        "state": "Default"
+      },
+      {
+        "label": "Discard session",
+        "to": "discard",
+        "style": "Secondary",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "discard",
+    "label": "Session · discard confirmation",
+    "title": "Discard this session?",
+    "subtitle": "Studying · 25 recorded minutes",
+    "parts": [
+      {
+        "type": "notice",
+        "title": "This session will not be saved",
+        "message": "Discarding earns no XP. Previously earned levels and rewards stay yours.",
+        "tone": "selected"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Keep session",
+        "to": "paused",
+        "style": "Secondary",
+        "state": "Default"
+      },
+      {
+        "label": "Discard session",
+        "to": "home",
+        "style": "Danger",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "loading",
+    "label": "Startup · loading local data",
+    "title": "Getting your room ready.",
+    "subtitle": "Loading saved progress on this device.",
+    "parts": [
+      {
+        "type": "room",
+        "label": "Still pose while loading",
+        "fallback": false
+      },
+      {
+        "type": "notice",
+        "title": "Loading your saved activities",
+        "message": "This does not require an internet connection.",
+        "tone": "selected"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Loading…",
+        "to": null,
+        "style": "Primary",
+        "state": "Saving"
+      }
+    ],
+    "note": "Designed startup state, not a measured loading duration."
+  },
+  {
+    "key": "assetFallback",
+    "label": "Animation · still-image fallback",
+    "title": "Studying",
+    "subtitle": "Session remains usable",
+    "parts": [
+      {
+        "type": "room",
+        "label": "Studying · still pose shown",
+        "fallback": true
+      },
+      {
+        "type": "text",
+        "value": "25:00",
+        "style": "timer",
+        "color": "text"
+      },
+      {
+        "type": "text",
+        "value": "Active time · pauses do not count",
+        "style": "caption",
+        "color": "muted"
+      },
+      {
+        "type": "button",
+        "label": "Retry animation",
+        "to": "session",
+        "style": "Secondary"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Pause session",
+        "to": "paused",
+        "style": "Secondary",
+        "state": "Default"
+      },
+      {
+        "label": "Finish session",
+        "to": "finish",
+        "style": "Primary",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "capReward",
+    "label": "Completion · daily XP ceiling",
+    "title": "Saved, at your pace.",
+    "subtitle": "Music · 20 minutes saved",
+    "parts": [
+      {
+        "type": "room",
+        "label": "Your activity is recorded",
+        "fallback": false
+      },
+      {
+        "type": "text",
+        "value": "+0 XP",
+        "style": "display",
+        "color": "primary"
+      },
+      {
+        "type": "notice",
+        "title": "Today's XP limit is reached",
+        "message": "You have earned 120 / 120 daily XP. This activity stays in history. Your levels and rewards are kept.",
+        "tone": "selected"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Back to Home",
+        "to": "homeAfter",
+        "style": "Primary",
+        "state": "Default"
+      }
+    ],
+    "note": "State specimen: separate day fixture from the 30-XP main-flow example."
+  },
+  {
+    "key": "categoryCap",
+    "label": "Completion · category reward ceiling",
+    "title": "Your session is saved.",
+    "subtitle": "Studying · 20 minutes saved",
+    "parts": [
+      {
+        "type": "text",
+        "value": "+0 XP",
+        "style": "display",
+        "color": "primary"
+      },
+      {
+        "type": "notice",
+        "title": "Two study rewards earned today",
+        "message": "Further study sessions still save to history. This limit does not take away any progress.",
+        "tone": "selected"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Back to Home",
+        "to": "homeAfter",
+        "style": "Primary",
+        "state": "Default"
+      }
+    ],
+    "note": "State specimen: two previously rewarded study sessions."
+  },
+  {
+    "key": "shortReward",
+    "label": "Completion · short session",
+    "title": "A small moment counts.",
+    "subtitle": "Music · 3 minutes saved",
+    "parts": [
+      {
+        "type": "room",
+        "label": "Enjoyment needs no minimum",
+        "fallback": false
+      },
+      {
+        "type": "text",
+        "value": "+0 XP",
+        "style": "display",
+        "color": "primary"
+      },
+      {
+        "type": "notice",
+        "title": "Saved to your history",
+        "message": "XP starts at 5 active minutes. Short activities still belong here; there is no need to keep going for a reward.",
+        "tone": "selected"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Back to Home",
+        "to": "homeAfter",
+        "style": "Primary",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "loadError",
+    "label": "Startup · local data read failure",
+    "title": "Your data could not load.",
+    "subtitle": "No reset has been performed.",
+    "parts": [
+      {
+        "type": "notice",
+        "title": "Try loading again",
+        "message": "If the problem continues, you can restore an exported backup after reviewing it.",
+        "tone": "errorSurface"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Try again",
+        "to": "homeAfter",
+        "style": "Primary",
+        "state": "Default"
+      },
+      {
+        "label": "Review a backup",
+        "to": "importReview",
+        "style": "Secondary",
+        "state": "Default"
+      }
+    ]
+  },
+  {
+    "key": "workSession",
+    "label": "Working · activity session",
+    "title": "Working",
+    "subtitle": "Session preview · sample timer",
+    "parts": [
+      {
+        "type": "room",
+        "label": "Working · desk detail planned",
+        "fallback": false
+      },
+      {
+        "type": "text",
+        "value": "25:00",
+        "style": "timer",
+        "color": "text"
+      },
+      {
+        "type": "notice",
+        "title": "Every activity uses the same rules",
+        "message": "5 active minutes earns 20 XP; 20 minutes earns 30 XP, within daily limits.",
+        "tone": "selected"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Pause session",
+        "to": "paused",
+        "style": "Secondary"
+      },
+      {
+        "label": "Finish session",
+        "to": "finish"
+      }
+    ],
+    "note": "Activity pose storyboard; final artwork is pending review."
+  },
+  {
+    "key": "gymSession",
+    "label": "Gym · activity session",
+    "title": "Gym",
+    "subtitle": "Session preview · sample timer",
+    "parts": [
+      {
+        "type": "room",
+        "label": "Gym · workout pose planned",
+        "fallback": false
+      },
+      {
+        "type": "text",
+        "value": "25:00",
+        "style": "timer",
+        "color": "text"
+      },
+      {
+        "type": "notice",
+        "title": "Every activity uses the same rules",
+        "message": "5 active minutes earns 20 XP; 20 minutes earns 30 XP, within daily limits.",
+        "tone": "selected"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Pause session",
+        "to": "paused",
+        "style": "Secondary"
+      },
+      {
+        "label": "Finish session",
+        "to": "finish"
+      }
+    ],
+    "note": "Activity pose storyboard; final artwork is pending review."
+  },
+  {
+    "key": "runSession",
+    "label": "Running · activity session",
+    "title": "Running",
+    "subtitle": "Session preview · sample timer",
+    "parts": [
+      {
+        "type": "room",
+        "label": "Running · movement pose planned",
+        "fallback": false
+      },
+      {
+        "type": "text",
+        "value": "25:00",
+        "style": "timer",
+        "color": "text"
+      },
+      {
+        "type": "notice",
+        "title": "Every activity uses the same rules",
+        "message": "5 active minutes earns 20 XP; 20 minutes earns 30 XP, within daily limits.",
+        "tone": "selected"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Pause session",
+        "to": "paused",
+        "style": "Secondary"
+      },
+      {
+        "label": "Finish session",
+        "to": "finish"
+      }
+    ],
+    "note": "Activity pose storyboard; final artwork is pending review."
+  },
+  {
+    "key": "musicSession",
+    "label": "Music · activity session",
+    "title": "Music",
+    "subtitle": "Session preview · sample timer",
+    "parts": [
+      {
+        "type": "room",
+        "label": "Music · headphones planned",
+        "fallback": false
+      },
+      {
+        "type": "text",
+        "value": "25:00",
+        "style": "timer",
+        "color": "text"
+      },
+      {
+        "type": "notice",
+        "title": "Every activity uses the same rules",
+        "message": "5 active minutes earns 20 XP; 20 minutes earns 30 XP, within daily limits.",
+        "tone": "selected"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Pause session",
+        "to": "paused",
+        "style": "Secondary"
+      },
+      {
+        "label": "Finish session",
+        "to": "finish"
+      }
+    ],
+    "note": "Activity pose storyboard; final artwork is pending review."
+  }
+]

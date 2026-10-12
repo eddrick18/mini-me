@@ -1,0 +1,25 @@
+{
+  "asset": "compatibility-character.riv",
+  "purpose": "Temporary native compatibility proof; final character artwork unapproved",
+  "contractVersion": 1,
+  "cliVersion": "1.5.1",
+  "runtimePackage": "@rive-app/react-native@0.5.4",
+  "nitroVersion": "0.36.5",
+  "nativeAndroidRuntime": "11.12.1",
+  "nativeIosRuntime": "6.28.0",
+  "artboard": "MiniMe",
+  "stateMachine": "CharacterController",
+  "viewModel": "CharacterState",
+  "properties": {
+    "pose": {
+      "type": "number",
+      "idle": 0,
+      "studying": 1,
+      "celebration": 2
+    }
+  },
+  "scripts": false,
+  "signing": "No scripts; local unsigned export, no account upload",
+  "editableSource": "character/source/scene.rml",
+  "sha256": "72a719686017fc06bc204d35d7563efdf5c89bf0cc90acd8c7598adb7f34c050"
+}

@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "Mini Me Preview",
+    "slug": "mini-me",
+    "version": "0.1.0",
+    "scheme": "minime",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "bundleIdentifier": "com.personal.minime"
+    },
+    "android": {
+      "package": "com.personal.minime"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-status-bar",
+      "expo-sqlite",
+      "expo-sharing",
+      [
+        "expo-audio",
+        {
+          "enableBackgroundRecording": false,
+          "enableBackgroundPlayback": false,
+          "recordAudioAndroid": false,
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "motionUsagePermission": false,
+          "locationAlwaysPermission": "Mini Me records Walking / Running distance in the background until you pause or finish.",
+          "locationWhenInUsePermission": "Mini Me uses GPS to measure your Walking / Running distance and award XP.",
+          "isAndroidForegroundServiceEnabled": true,
+          "isIosBackgroundLocationEnabled": true,
+          "isAndroidBackgroundLocationEnabled": true,
+          "locationAlwaysAndWhenInUsePermission": "Mini Me continues recording Walking / Running distance when the phone is locked or you use another app. Routes are not saved."
+        }
+      ]
+    ],
+    "web": {
+      "output": "static"
+    }
+  }
+}

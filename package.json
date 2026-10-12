@@ -1,0 +1,51 @@
+{
+  "name": "mini-me",
+  "version": "0.1.0",
+  "private": true,
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "pwsh -NoProfile -File scripts/start.ps1",
+    "start:go": "pwsh -NoProfile -File scripts/start-expo-go.ps1",
+    "android": "pwsh -NoProfile -File scripts/build-android.ps1",
+    "web": "expo start --web",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "build:web": "expo export --platform web",
+    "character:verify": "pwsh -NoProfile -File scripts/verify-character.ps1"
+  },
+  "dependencies": {
+    "@rive-app/react-native": "0.5.4",
+    "expo": "^57.0.23",
+    "expo-audio": "~57.0.5",
+    "expo-constants": "~57.0.21",
+    "expo-dev-client": "~57.0.19",
+    "expo-document-picker": "~57.0.3",
+    "expo-file-system": "~57.0.7",
+    "expo-haptics": "~57.0.3",
+    "expo-linking": "~57.0.12",
+    "expo-location": "~57.0.20",
+    "expo-router": "~57.0.25",
+    "expo-sharing": "~57.0.22",
+    "expo-sqlite": "~57.0.4",
+    "expo-status-bar": "~57.0.1",
+    "expo-system-ui": "~57.0.4",
+    "expo-task-manager": "~57.0.21",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-gesture-handler": "~2.32.0",
+    "react-native-nitro-modules": "0.36.5",
+    "react-native-reanimated": "4.5.1",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-screens": "~4.26.0",
+    "react-native-svg": "15.15.4",
+    "react-native-web": "~0.21.0",
+    "react-native-worklets": "0.10.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@types/react": "~19.2.2",
+    "typescript": "~6.0.3"
+  }
+}
+

@@ -1,0 +1,45 @@
+/* Transform-only ambient loops; SVG joints preserve the selected pixel outfit. */
+.room .sprite{animation:companion-breathe 3s steps(2,end) infinite;transform-origin:50% 100%}
+.rig-head{transform-box:view-box;transform-origin:20px 29px}
+.rig-leftArm{transform-box:view-box;transform-origin:11px 34px}.rig-rightArm{transform-box:view-box;transform-origin:29px 34px}
+.rig-leftLeg{transform-box:view-box;transform-origin:15px 52px}.rig-rightLeg{transform-box:view-box;transform-origin:25px 52px}
+.rig-blink{opacity:0;animation:pixel-blink 5s steps(1,end) infinite}
+.room .window{animation:cloud-drift 22s linear infinite alternate}
+.room .plant:before,.room .plant:after{animation:leaf-sway 5s steps(2,end) infinite alternate;transform-origin:50% 100%}
+.room[data-motion=studying] .rig-head,.room[data-motion=working] .rig-head{animation:reading-nod 3s steps(2,end) infinite}
+.room[data-motion=studying] .rig-prop{animation:page-bob 3s steps(2,end) infinite}
+.room[data-motion=working] .rig-leftArm,.room[data-motion=working] .rig-rightArm{animation:typing 1s steps(2,end) infinite alternate}
+.room[data-motion=gym] .rig-prop{animation:weight-lift 2.4s steps(4,end) infinite}
+.room[data-motion=gym] .rig-leftArm,.room[data-motion=gym] .rig-rightArm{animation:arm-lift 2.4s steps(4,end) infinite}
+.room[data-motion=running] .sprite{animation:running-bob .7s steps(2,end) infinite}
+.room[data-motion=running] .rig-leftLeg,.room[data-motion=running] .rig-rightArm{animation:run-limb .7s steps(2,end) infinite alternate}
+.room[data-motion=running] .rig-rightLeg,.room[data-motion=running] .rig-leftArm{animation:run-limb .7s steps(2,end) infinite alternate-reverse}
+.room[data-motion=music] .rig-head{animation:music-nod 1.4s steps(2,end) infinite}
+.room[data-motion=celebrating] .sprite{animation:celebrate-hop .65s steps(3,end) 3}
+.room[data-motion=celebrating] .rig-leftArm{transform:rotate(110deg)}
+.room[data-motion=celebrating] .rig-rightArm{transform:rotate(-110deg)}
+.room[data-motion=celebrating] .rig-leftArm,.room[data-motion=celebrating] .rig-rightArm{animation:celebrate-arms 2s steps(1,end) forwards}
+.scene-spark{position:absolute;color:#755400;font-size:29px;top:87px;animation:spark-cheer .65s steps(3,end) 3 forwards}.spark-one{left:65px}.spark-two{right:65px;animation-delay:.15s}
+.room[data-motion=paused] .sprite,.room[data-motion=paused] .sprite *,.room[data-motion=fallback] *{animation:none!important}
+.scene-still .room *,.scene-still .room *:before,.scene-still .room *:after{animation:none!important}
+.scene-still .scene-spark{display:none}.scene-hidden .room *,.scene-hidden .room *:before,.scene-hidden .room *:after{animation-play-state:paused!important}
+.room.scene-offscreen *,.room.scene-offscreen *:before,.room.scene-offscreen *:after{animation-play-state:paused!important}
+@keyframes companion-breathe{50%{transform:translateY(-2px)}}
+@keyframes pixel-blink{0%,92%,97%,100%{opacity:0}93%,96%{opacity:1}}
+@keyframes cloud-drift{to{transform:translateX(45px)}}
+@keyframes leaf-sway{to{transform:rotate(5deg)}}
+@keyframes reading-nod{50%{transform:rotate(2deg)}}
+@keyframes page-bob{50%{transform:translateY(1px)}}
+@keyframes typing{to{transform:translateY(-1px)}}
+@keyframes weight-lift{50%{transform:translateY(-7px)}}
+@keyframes arm-lift{50%{transform:translateY(-3px)}}
+@keyframes running-bob{50%{transform:translateY(-4px)}}
+@keyframes run-limb{from{transform:rotate(-10deg)}to{transform:rotate(10deg)}}
+@keyframes music-nod{50%{transform:rotate(-2deg)}}
+@keyframes celebrate-hop{50%{transform:translateY(-9px)}}
+@keyframes celebrate-arms{100%{transform:rotate(0)}}
+@keyframes spark-cheer{0%{opacity:0;transform:translateY(10px)}40%{opacity:1}100%{opacity:0;transform:translateY(-14px)}}
+@media(prefers-reduced-motion:reduce){.room *,.room *:before,.room *:after{animation:none!important}.scene-spark{display:none}}
+.room .sprite.taller-sprite{width:220px;height:210px;left:calc(50% - 110px);top:auto;bottom:14px;animation:none!important;filter:none}
+.sprite-frame{position:absolute;display:block;bottom:0;left:50%;transform:translateX(-50%);background-repeat:no-repeat;image-rendering:pixelated}
+.choice:disabled{opacity:.65;cursor:default}

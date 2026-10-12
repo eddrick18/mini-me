@@ -1,0 +1,15 @@
+node_modules/
+.expo/
+dist/
+android/
+ios/
+.scaffold/
+character/source/build/
+character/pixel-draft/build/
+character/interactions/build/
+handoff/
+Mini-Me-design-handoff.zip
+artifacts/
+*.log
+.env*
+!.env.example

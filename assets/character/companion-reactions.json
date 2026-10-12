@@ -1,0 +1,20 @@
+{
+  "asset": "companion-reactions.riv",
+  "purpose": "Separate wave/sparkle reaction badge; does not animate production body sprites",
+  "artboard": "CompanionReactions",
+  "stateMachine": "ReactionController",
+  "viewModel": "ReactionState",
+  "properties": {
+    "reaction": {
+      "type": "number",
+      "rest": 0,
+      "wave": 1,
+      "sparkle": 2
+    }
+  },
+  "editableSource": "character/interactions/scene.rml",
+  "runtimeMs": 1800,
+  "sha256": "d2196f70e7ab9b1fe00d569f606520e0a454deb755d781ebd1140da14f8eedde",
+  "scripts": false,
+  "accountUpload": false
+}

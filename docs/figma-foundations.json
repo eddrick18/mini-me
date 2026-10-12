@@ -1,0 +1,54 @@
+{
+  "createdNodeIds": [
+    "7:50"
+  ],
+  "wrapperId": "7:50",
+  "collections": {
+    "primitives": "VariableCollectionId:7:2",
+    "proposal": "VariableCollectionId:7:3"
+  },
+  "variables": {
+    "color/primary": "VariableID:7:18",
+    "color/pressed": "VariableID:7:19",
+    "color/background": "VariableID:7:20",
+    "color/surface": "VariableID:7:21",
+    "color/text": "VariableID:7:22",
+    "color/muted": "VariableID:7:23",
+    "color/border": "VariableID:7:24",
+    "color/stage": "VariableID:7:25",
+    "color/accent": "VariableID:7:26",
+    "color/success": "VariableID:7:27",
+    "color/error": "VariableID:7:28",
+    "color/errorSurface": "VariableID:7:29",
+    "color/disabled": "VariableID:7:30",
+    "color/selected": "VariableID:7:31",
+    "space/zero": "VariableID:7:32",
+    "space/xs": "VariableID:7:33",
+    "space/sm": "VariableID:7:34",
+    "space/md": "VariableID:7:35",
+    "space/lg": "VariableID:7:36",
+    "space/page": "VariableID:7:37",
+    "space/xl": "VariableID:7:38",
+    "radius/none": "VariableID:7:39",
+    "radius/control": "VariableID:7:40",
+    "radius/room": "VariableID:7:41",
+    "size/touch": "VariableID:7:42"
+  },
+  "styles": {
+    "display": "S:c46a6455719a68d64dee34d8bf62a211dcbdf9ae,",
+    "title": "S:f832f8a8927e3fa6277bf859c44d46ee373d80f0,",
+    "body": "S:8c3c42f4c772baf73916e3934ad777877cbcb529,",
+    "label": "S:d4a013c07cf045c6cbc2bb4fb443150894e2ea17,",
+    "caption": "S:e9de2dfdab507573985e795ad502501aa6828810,",
+    "smallStrong": "S:406b5bf52575825a9df2b2eee753c6c5dc054719,",
+    "timer": "S:51d300dce811b659a53a8e68285613af84dfc581,"
+  },
+  "counts": {
+    "primitive": 14,
+    "semantic": 25,
+    "styles": 7
+  },
+  "modes": [
+    "Light"
+  ]
+}
